@@ -28,7 +28,8 @@ RED.nodes.registerType('play audio',{
                     source.buffer = buffer;
                     source.connect(context.destination);
                     source.start(0);
-                })                
+                })
+                context.close();
             }
             catch(e)
             {
